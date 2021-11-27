@@ -1,0 +1,4 @@
+@font-face {
+  font-family: "bluunext";
+  src: url("/fonts/bluunext.woff2") format("woff2"), url("/fonts/bluunext.woff") format("woff");
+}
