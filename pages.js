@@ -2,9 +2,11 @@ let pageNumber = 0
 
 const nextTag = document.querySelector("footer img.next")
 const prevTag = document.querySelector("footer img.prev")
+const randomTag = document.querySelector("footer img.random")
 const outputTag = document.querySelector("h2")
 const circleTag = document.querySelector("section div.circle")
 const bodyTag = document.querySelector("body")
+
 const pages = [
   { copy: "a Brooklyn-based graphic designer", background: "#edc7a9", cirlce: "#3e78ed"},
   { copy: "Kanye West's biggest fan", background: "#a1fffe", cirlce: "#e34a47"},
@@ -32,6 +34,11 @@ const prev = function(){
   updateSection()
 }
 
+const random = function(){
+  pageNumber = Math.floor(Math.random() * pages.length)
+  updateSection()
+}
+
 const updateSection = function(){
   outputTag.innerHTML = pages[pageNumber].copy
   circleTag.style.backgroundColor = pages[pageNumber].cirlce
@@ -44,4 +51,8 @@ nextTag.addEventListener("click", function(){
 
 prevTag.addEventListener("click", function(){
   prev()
+})
+
+randomTag.addEventListener("click", function(){
+  random()
 })
