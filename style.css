@@ -28,6 +28,10 @@ section {
   text-align: center;
 }
 
+section a {
+  color: #000;
+}
+
 section div.circle {
   width: 20px;
   height: 20px;
